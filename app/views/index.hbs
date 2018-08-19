@@ -2,13 +2,29 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Hello From Express</title>
+    <title>Reservamos Movie Night</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   </head>
   <body>
     <div class="container">
       <h1>Movie Night</h1>
       <hr />
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Pelicula</th>
+            <th scope="col">Cines</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each movies}}
+            <tr>
+              <td>{{this.title}}</td>
+              <td>{{this.theaters}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
     </div>
   </body>
 </html>
