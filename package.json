@@ -1,0 +1,25 @@
+{
+  "name": "movienight-reservamos",
+  "version": "1.0.0",
+  "description": "Hacking with Node.js Workshop",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_PATH=app nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/reservamos/movienight"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "hbs": "^4.0.1"
+  },
+  "author": "Adrian Cuadros",
+  "license": "MIT"
+}
