@@ -6,5 +6,9 @@ axios.get('https://www.rottentomatoes.com/api/private/v2.0/search/', {
     q: "Christopher Robin"
   }
 }).then((response) => {
-  console.log(response.data);
+  const movie = response.data.movies[0];
+  console.log({
+    rtScore: movie.meterScore,
+    rtClass: movie.meterClass
+  });
 })
