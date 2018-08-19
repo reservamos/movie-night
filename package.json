@@ -17,6 +17,8 @@
     "nodemon": "^1.17.5"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.3",
     "hbs": "^4.0.1"
   },

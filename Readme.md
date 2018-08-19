@@ -15,3 +15,10 @@ Hacking Websites with Node.js. Taller por el equipo de tecnología de  © [Reser
 ## Para correr el servidor
 
 `npm run start`
+
+## Conceptos Clave
+
+* HTTP Requests
+* API's
+* JSON
+* Web Scraping
