@@ -4,7 +4,8 @@
   "description": "Hacking with Node.js Workshop",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_PATH=app nodemon index.js"
+    "start": "NODE_PATH=app nodemon index.js",
+    "hack": "NODE_PATH=app node index.js hack"
   },
   "repository": {
     "type": "git",

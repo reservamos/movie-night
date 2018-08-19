@@ -15,3 +15,7 @@ Hacking Websites with Node.js. Taller por el equipo de tecnología de  © [Reser
 ## Correr el servidor
 
 `npm run start`
+
+## Hackear código
+
+`npm run hack`

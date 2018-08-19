@@ -1,2 +1,7 @@
 require('babel-register');
-require('index.js');
+
+if (process.argv[2] == "hack") {
+  require('hacks.js');
+} else {
+  require('index.js');
+}
