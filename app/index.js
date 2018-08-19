@@ -10,9 +10,23 @@ app.use(express.static('public'));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
+const buildMovies = () => {
+  return getTodaysMovies().then((movies) => {
+    let promises = []
+    movies.forEach((movie) => {
+      promises.push(getRottenTomatoesData(movie.originalTitle).then((data) => {
+        movie.rtScore = data.rtScore;
+        movie.rtClass = data.rtClass;
+        return movie;
+      }));
+    });
+    return Promise.all(promises);
+  });
+}
+
 app.get('/',  (req, res) => {
   buildMovies().then((movies) => {
-    res.render('index', { movies: movies})
+    res.render('index', { movies: movies })
   });
 });
 
