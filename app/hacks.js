@@ -1,20 +1,21 @@
-import axios from 'axios';
+import { getRottenTomatoesData } from 'rotten';
+import { getTodaysMovies } from 'cinepolis';
 
-function getRottenTomatoesData(movieName) {
-  return axios.get('https://www.rottentomatoes.com/api/private/v2.0/search/', {
-    params: {
-      limit: 1,
-      q: movieName
-    }
-  }).then((response) => {
-    const movie = response.data.movies[0];
-    return {
-      rtScore: movie.meterScore,
-      rtClass: movie.meterClass
-    };
-  })
+function buildMovies () {
+  return getTodaysMovies().then((movies) => {
+    let promises = []
+    movies.forEach((movie) => {
+      promises.push(getRottenTomatoesData(movie.originalTitle).then((data) => {
+        movie.rtScore = data.rtScore;
+        movie.rtClass = data.rtClass;
+        return movie;
+      }));
+    });
+    return Promise.all(promises);
+  });
 }
 
-getRottenTomatoesData("Mission Impossible v").then((data) => {
+
+buildMovies().then((data) => {
   console.log(data);
 });
