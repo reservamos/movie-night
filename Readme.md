@@ -1,4 +1,4 @@
-# Movie Night
+# Movie Night - Node.JS Workshop
 
 Hacking Websites with Node.js. Taller por el equipo de tecnología de  © [Reservamos.mx](https://www.reservamos.mx).
 
