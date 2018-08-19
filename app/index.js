@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { getTodaysMovies } from 'cinepolis';
+import { getRottenTomatoesData } from 'rotten';
 
 // Create Express App
 const app = express();
@@ -10,7 +11,7 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.get('/',  (req, res) => {
-  getTodaysMovies().then((movies) => {
+  buildMovies().then((movies) => {
     res.render('index', { movies: movies})
   });
 });
