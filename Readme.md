@@ -73,7 +73,7 @@ promise.then(() => {
 });
 ```
 
-## Herramientas y conceptos
+## Herramientas y conceptos
 
 * Servidor Web con [Express](https://expressjs.com/)
 * Templates Html/Javascript con [Handlebars](https://handlebarsjs.com/)
@@ -81,7 +81,7 @@ promise.then(() => {
 * Pruebas de Requests HTTP con [Postman](https://www.getpostman.com/)
 * Uso de ES6 a través de [Babel](https://babeljs.io/)
 
-## Bonus
+## Bonus
 
 * [Curso de Reservamos en ES6](https://github.com/reservamos/training)
 * [Más acerca de promesas](https://codeburst.io/javascript-promises-explained-with-simple-real-life-analogies-dd6908092138)
