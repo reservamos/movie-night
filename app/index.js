@@ -28,8 +28,10 @@ const buildMovie = (movie) => {
   });
 }
 
+const movies = buildMovies();
+
 app.get('/',  (req, res) => {
-  buildMovies().then((movies) => {
+  movies.then((movies) => {
     res.render('index', { movies: movies })
   });
 });
