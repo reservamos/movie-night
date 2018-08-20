@@ -23,8 +23,18 @@
             <tr>
               <td>{{this.title}}</td>
               <td>{{this.theaters}}</td>
-              <td>{{this.rtScore}}</td>
-              <td>{{this.rtClass}}</td>
+              <td>
+                {{#if this.rtScore}}
+                  {{#if this.rotten}}
+                    <img src="http://localhost:3000/rotten.png" alt="Rotten movie" />
+                  {{else}}
+                    <img src="http://localhost:3000/fresh.png" alt="Rotten movie" />
+                  {{/if}}
+                  {{this.rtScore}}%
+                {{else}}
+                  No disponible
+                {{/if}}
+              </td>
             </tr>
           {{/each}}
         </tbody>

@@ -15,8 +15,10 @@ function buildMovies () {
     let promises = []
     movies.forEach((movie) => {
       promises.push(getRottenTomatoesData(movie.originalTitle).then((data) => {
-        movie.rtScore = data.rtScore;
-        movie.rtClass = data.rtClass;
+        if (data.rtClass === 'rotten' || data.rtClass === 'certified_fresh') {
+          movie.rtScore = data.rtScore;
+          movie.rotten = data.rtClass === 'rotten';
+        }
         return movie;
       }));
     });
