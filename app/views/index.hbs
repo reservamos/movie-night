@@ -12,6 +12,7 @@
       <table class="table">
         <thead class="thead-dark">
           <tr>
+            <th scope="col"></th>
             <th scope="col">Pelicula</th>
             <th scope="col">Cines</th>
             <th scope="col">Rotten Score</th>
@@ -21,11 +22,19 @@
         <tbody>
           {{#each movies}}
             <tr>
+              <td><img src="{{this.image}}" alt="{{this.title}}" style='width:100px'> </td>
               <td>{{this.title}}</td>
               <td>
                 <ul>
                 {{#each this.theaters}}
-                  <li>{{this}}</li>
+                  <li>
+                    {{this.name}}
+                    <ul>
+                      {{#each this.times}}
+                        <li>{{this}}</li>
+                      {{/each}}
+                    </ul>
+                  </li>
                 {{/each}}
                 </ul>
               </td>
