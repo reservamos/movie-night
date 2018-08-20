@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="container">
-      <h1>Movie Night</h1>
+      <h1>Movie Night - Monterrey Sur</h1>
       <hr />
       <table class="table">
         <thead class="thead-dark">
@@ -22,7 +22,13 @@
           {{#each movies}}
             <tr>
               <td>{{this.title}}</td>
-              <td>{{this.theaters}}</td>
+              <td>
+                <ul>
+                {{#each this.theaters}}
+                  <li>{{this}}</li>
+                {{/each}}
+                </ul>
+              </td>
               <td>
                 {{#if this.rtScore}}
                   {{#if this.rotten}}
