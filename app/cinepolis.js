@@ -32,5 +32,5 @@ export function getTodaysMovies() {
     esVIP: false
   }).then((response) => {
     return extractMovies(response.data.d.Cinemas);
-  })
+  });
 }

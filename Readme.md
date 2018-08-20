@@ -26,15 +26,15 @@ Algunas cosas que hay servirán durante el workshop:
 
 ```javascript
 // 1. Javascript is a dynamic language. So no types
-const name = "Adrian Cuadros"
-let age = 32
+const name = "Adrian Cuadros";
+let age = 32;
 
 // 2. Short function declaration
 const saySomething = (something) => {
   console.log(`You said: ${something}`);
 }
 
-saySomething("Hi!")
+saySomething("Hi!");
 
 // 3. Javascript Objects
 const fruit = {
