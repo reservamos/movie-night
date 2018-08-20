@@ -14,15 +14,19 @@ function buildMovies () {
   return getTodaysMovies().then((movies) => {
     let promises = []
     movies.forEach((movie) => {
-      promises.push(getRottenTomatoesData(movie.originalTitle).then((data) => {
-        if (data.rtClass === 'rotten' || data.rtClass === 'certified_fresh') {
-          movie.rtScore = data.rtScore;
-          movie.rotten = data.rtClass === 'rotten';
-        }
-        return movie;
-      }));
+      promises.push(buildMovie(movie));
     });
     return Promise.all(promises);
+  });
+}
+
+function buildMovie (movie) {
+  return getRottenTomatoesData(movie.originalTitle).then((data) => {
+    if (data.rtClass === 'rotten' || data.rtClass === 'certified_fresh') {
+      movie.rtScore = data.rtScore;
+      movie.rotten = data.rtClass === 'rotten';
+    }
+    return movie;
   });
 }
 
