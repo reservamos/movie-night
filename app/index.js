@@ -4,6 +4,7 @@ import path from 'path';
 // Create Express App
 const app = express();
 
+app.use(express.static('public'))
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
 
