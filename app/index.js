@@ -14,13 +14,17 @@ const buildMovies = () => {
   return getTodaysMovies().then((movies) => {
     let promises = []
     movies.forEach((movie) => {
-      promises.push(getRottenTomatoesData(movie.originalTitle).then((data) => {
-        movie.rtScore = data.rtScore;
-        movie.rtClass = data.rtClass;
-        return movie;
-      }));
+      promises.push(buildMovie(movie));
     });
     return Promise.all(promises);
+  });
+}
+
+function buildMovie (movie) {
+  return getRottenTomatoesData(movie.originalTitle).then((data) => {
+    movie.rtScore = data.rtScore;
+    movie.rtClass = data.rtClass;
+    return movie;
   });
 }
 
