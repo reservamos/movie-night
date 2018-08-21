@@ -86,4 +86,4 @@ promise.then(() => {
 
 ## Prácticas en Reservamos ?
 
-Escríbenos a hola@reservamos.mx con cualquier información que tengas para compartirnos (Sobre ti, código, un intro, etc.).
+Escríbenos a hola@reservamos.mx con cualquier información que tengas para compartirnos.
