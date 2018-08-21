@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-function cleanMovieName (name) {
+const cleanMovieName = (name) => {
   return name.replace(/\(.+/, "");
 }
 
-export function getRottenTomatoesData(movieName) {
+export const getRottenTomatoesData = (movieName) => {
   return axios.get('https://www.rottentomatoes.com/api/private/v2.0/search/', {
     params: {
       limit: 1,

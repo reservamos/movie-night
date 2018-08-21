@@ -20,7 +20,7 @@ const buildMovies = () => {
   });
 }
 
-function buildMovie (movie) {
+const buildMovie = (movie) => {
   return getRottenTomatoesData(movie.originalTitle).then((data) => {
     movie.rtScore = data.rtScore;
     movie.rtClass = data.rtClass;
