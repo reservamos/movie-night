@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-function findMovieIndex(movies, key) {
+const findMovieIndex = (movies, key) => {
   return movies.findIndex((movie) => {
     return movie.key === key
   });
 }
 
-function extractMovies(apiTheaters) {
+const extractMovies = (apiTheaters) => {
   let movies = [];
   apiTheaters.forEach((apiTheater) => {
     apiTheater.Dates[0].Movies.forEach((apiMovie) => {
@@ -26,7 +26,7 @@ function extractMovies(apiTheaters) {
   return movies;
 }
 
-export function getTodaysMovies() {
+export const getTodaysMovies = () => {
   return axios.post('http://www.cinepolis.com/Cartelera.aspx/GetNowPlayingByCity', {
     claveCiudad: "monterrey-sur",
     esVIP: false
