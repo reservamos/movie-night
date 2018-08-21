@@ -6,7 +6,6 @@ const findMovieIndex = (movies, key) => {
   });
 }
 
-
 const extractTimes = (apiMovie) => {
   let result = []
   apiMovie.Formats.forEach((format) => {
