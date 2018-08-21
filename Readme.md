@@ -83,3 +83,7 @@ promise.then(() => {
 
 * [Curso de Reservamos en ES6](https://github.com/reservamos/training)
 * [Más acerca de promesas](https://codeburst.io/javascript-promises-explained-with-simple-real-life-analogies-dd6908092138)
+
+## Prácticas en Reservamos ?
+
+Escríbenos a hola@reservamos.mx con cualquier información que tengas para compartirnos (Sobre ti, código, un intro, etc.).
