@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-function getRottenTomatoesData(movieName) {
+const getRottenTomatoesData = (movieName) => {
   return axios.get('https://www.rottentomatoes.com/api/private/v2.0/search/', {
     params: {
       limit: 1,
