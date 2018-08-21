@@ -1,6 +1,6 @@
 # Movie Night - Node.JS Workshop
 
-Hacking Websites with Node.js. Taller por el equipo de tecnología de  © [Reservamos.mx](https://www.reservamos.mx).
+Hacking Websites with Node.js. Taller por el equipo de tecnología de  © [Reservamos.mx](https://www.reservamos.mx). Para efectos de este workshop cuando hablamos de Javascript nos referimos a [EcmaScript 6 o ES6 6](https://github.com/lukehoban/es6features).
 
 ## Requisitos
 
@@ -60,7 +60,7 @@ let firstGreenFruit = fruits.find((fruit) => {
 console.log(firstGreenFruit.name);
 
 // 5. Promises
-var promise = new Promise((resolve, reject) => {
+let promise = new Promise((resolve, reject) => {
   setTimeout(resolve, 3000);
 });
 
@@ -70,3 +70,20 @@ promise.then(() => {
   saySomething("Oh no!");
 });
 ```
+
+## Herramientas y conceptos
+
+* Servidor Web con [Express](https://expressjs.com/)
+* Templates Html/Javascript con [Handlebars](https://handlebarsjs.com/)
+* Requests HTTP con [Axios](https://github.com/axios/axios)
+* Pruebas de Requests HTTP con [Postman](https://www.getpostman.com/)
+* Uso de ES6 a través de [Babel](https://babeljs.io/)
+
+## Bonus
+
+* [Curso de Reservamos en ES6](https://github.com/reservamos/training)
+* [Más acerca de promesas](https://codeburst.io/javascript-promises-explained-with-simple-real-life-analogies-dd6908092138)
+
+## Prácticas en Reservamos
+
+Escríbenos a hola@reservamos.mx con cualquier información que tengas para compartirnos.
